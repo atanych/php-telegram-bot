@@ -1,19 +1,19 @@
 {
-    "name": "longman/telegram-bot",
+    "name": "atanych/telegram-bot",
     "type": "library",
-    "description": "PHP telegram bot",
+    "description": "PHP telegram bot (it is fork from longman/telegram-bot",
     "keywords": ["telegram", "bot", "api"],
     "license": "MIT",
-    "homepage": "https://github.com/akalongman/php-telegram-bot",
+    "homepage": "https://github.com/atanych/php-telegram-bot",
     "support": {
         "issues": "https://github.com/akalongman/php-telegram-bot/issues",
         "source": "https://github.com/akalongman/php-telegram-bot"
     },
     "authors": [
         {
-        "name": "Avtandil Kikabidze aka LONGMAN",
-        "email": "akalongman@gmail.com",
-        "homepage": "http://longman.ge",
+        "name": "Vladimir Atanov",
+        "email": "atanych@gmail.com",
+        "homepage": "http://atanych.ge",
         "role": "Developer"
         }
     ],
