@@ -1,7 +1,7 @@
 {
     "name": "atanych/telegram-bot",
     "type": "library",
-    "description": "PHP telegram bot (it is fork from longman/telegram-bot",
+    "description": "PHP telegram bot (it is fork from longman/telegram-bot)",
     "keywords": ["telegram", "bot", "api"],
     "license": "MIT",
     "homepage": "https://github.com/atanych/php-telegram-bot",
