@@ -4,6 +4,7 @@ $loader = require __DIR__.'/vendor/autoload.php';
 
 $API_KEY = 'your_bot_api_key';
 $BOT_NAME = 'namebot';
+
 $link = 'https://yourdomain/yourpath_to_hook.php';
 try {
     // create Telegram API object
