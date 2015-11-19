@@ -120,7 +120,8 @@ class Request
         $curlConfig = array(
             CURLOPT_URL => 'https://api.telegram.org/bot' . self::$telegram->getApiKey() . '/' . $action,
             CURLOPT_POST => true,
-            CURLOPT_RETURNTRANSFER => true
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POSTFIELDS => null
         );
 
         if (!empty($data)) {
