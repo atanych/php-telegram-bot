@@ -39,7 +39,7 @@ class ServerResponse extends Entity
                     } elseif (isset($data['result']['file_id'])) {
                         //Response getFile
                         $this->result = new File($data['result']);
-                    } elseif (!$data['result']['message_id']) {
+                    } elseif (!isset($data['result']['message_id'])) {
                         $this->result = new User($data['result'], $bot_name);
                     } else {
                         //Response from sendMessage
