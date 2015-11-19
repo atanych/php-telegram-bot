@@ -109,7 +109,7 @@ class Request
         return $fake_response;
     }
 
-    public static function executeCurl($action, array $data)
+    public static function executeCurl($action, $data = null)
     {
 
         $ch = curl_init();
