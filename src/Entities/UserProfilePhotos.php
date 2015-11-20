@@ -22,13 +22,7 @@ class UserProfilePhotos extends Entity
     {
 
         $this->total_count = isset($data['total_count']) ? $data['total_count'] : null;
-        if (empty($this->total_count)) {
-            throw new TelegramException('total_count is empty!');
-        }
         $this->photos = isset($data['photos']) ? $data['photos'] : null;
-        if (empty($this->photos)) {
-            throw new TelegramException('photos is empty!');
-        }
 
         $photos = [];
         foreach ($this->photos as $key => $photo) {
