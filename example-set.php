@@ -7,14 +7,6 @@ $BOT_NAME = 'namebot';
 
 $link = 'https://yourdomain/yourpath_to_hook.php';
 try {
-//    $device = $this->getDevice($deviceId);
-    new \Longman\TelegramBot\Telegram('145720770:AAHJuvqZFipNQr4rE3tuoWI3e_GjwaN1rq8');
-    $result = \Longman\TelegramBot\Request::getUserProfilePhotos([
-        'user_id' => '145720770',
-        'limit'   => 1
-    ]);
-    print_r($result->getResult()->getPhotos()); exit;
-
     // create Telegram API object
     $telegram = new Longman\TelegramBot\Telegram($API_KEY, $BOT_NAME);
     // set webhook
