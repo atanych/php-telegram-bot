@@ -129,7 +129,8 @@ class Request
                 $data['text'] = ' ' . $data['text'];
             }
             if ($action == 'sendMessage') {
-                $curlConfig[CURLOPT_POSTFIELDS] = http_build_query($data);
+                $curlConfig[CURLOPT_POSTFIELDS] = json_encode($data);
+                $curlConfig[CURLOPT_HTTPHEADER] = ['Content-Type: application/json'];
             } else {
                 $curlConfig[CURLOPT_POSTFIELDS] = $data;
             }
