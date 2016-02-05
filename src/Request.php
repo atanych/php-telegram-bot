@@ -128,7 +128,11 @@ class Request
             if (!empty($data['text']) && substr($data['text'], 0, 1) === '@') {
                 $data['text'] = ' ' . $data['text'];
             }
-            $curlConfig[CURLOPT_POSTFIELDS] = $data;
+            if ($action == 'sendMessage') {
+                $curlConfig[CURLOPT_POSTFIELDS] = http_build_query($data);
+            } else {
+                $curlConfig[CURLOPT_POSTFIELDS] = $data;
+            }
         }
 
         if (self::$telegram->getLogVerbosity() >= 3) {
