@@ -220,7 +220,7 @@ class Request
         fclose($fp);
       
         if (filesize($loc_path) > 0) {
-            return true;
+            return $new_path;
         } else {
             return false;
         }
