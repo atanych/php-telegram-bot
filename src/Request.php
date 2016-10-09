@@ -177,10 +177,11 @@ class Request
     public static function downloadFile(File $file)
     {
         $path = $file->getFilePath();
-
+        $pathInfo = pathinfo($path);
+        $new_path = $pathInfo['dirname'] . '/' . $pathInfo['filename'] . time() . '_' . rand(0, 99999) .'.' . $pathInfo['extension'];
         #Create the directory
         $basepath = self::$telegram->getDownloadPath();
-        $loc_path = $basepath.'/'.$path;
+        $loc_path = $basepath.'/'.$new_path;
 
         $dirname = dirname($loc_path);
         if (!is_dir($dirname)) {
