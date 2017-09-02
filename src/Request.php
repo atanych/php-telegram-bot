@@ -286,7 +286,9 @@ class Request
         }
 
         if (!is_null($file)) {
-            if (!filter_var($file, FILTER_VALIDATE_URL)) {
+            if (filter_var($file, FILTER_VALIDATE_URL)) {
+                $data['photo'] = $file;
+            } else {
                 $data['photo'] = self::encodeFile($file);
             }
         }
