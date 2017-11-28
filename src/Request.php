@@ -123,6 +123,9 @@ class Request
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_POSTFIELDS => null
         );
+        if (!empty(Yii::$app->params['proxy'])) {
+            $curlConfig[CURLOPT_PROXY] = Yii::$app->params['proxy'];
+        }
 
         if (!empty($data)) {
             if (!empty($data['text']) && substr($data['text'], 0, 1) === '@') {
@@ -208,6 +211,9 @@ class Request
             CURLOPT_CONNECTTIMEOUT => 10,
             CURLOPT_FILE => $fp
         );
+        if (!empty(Yii::$app->params['proxy'])) {
+            $curlConfig[CURLOPT_PROXY] = Yii::$app->params['proxy'];
+        }
 
         curl_setopt_array($ch, $curlConfig);
         $result = curl_exec($ch);
