@@ -254,6 +254,10 @@ class Request
         //echo $result;
 
         $bot_name = self::$telegram->getBotName();
+        $arr = json_decode($result, true);
+        if (!$arr) {
+            \Yii::error('after sending via TG: ' . print_r($arr, true));
+        }
         return new ServerResponse(json_decode($result, true), $bot_name);
     }
 
